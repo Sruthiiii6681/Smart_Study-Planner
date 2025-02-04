@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Planner - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="dashboard.js" defer></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="profile">
+                <h2 id="userName">User Name</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><button class="nav-link" data-section="planner">Planner</button></li>
+                    <li><button class="nav-link" data-section="todo">To-Do List</button></li>
+                    <li><button class="nav-link" data-section="timer">Timer/Stopwatch</button></li>
+                    <li><button class="nav-link" data-section="notepad">Notepad</button></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section id="planner" class="section">
+                <h2>Weekly/Monthly Planner</h2>
+                <div class="planner-controls">
+                    <button id="weeklyView">Weekly</button>
+                    <button id="monthlyView">Monthly</button>
+                </div>
+                <div id="calendar">
+                    <div class="month-header">
+                        <span id="monthName"></span>
+                        <div class="month-navigation">
+                            <button id="prevMonth">&lt;</button>
+                            <button id="nextMonth">&gt;</button>
+                        </div>
+                    </div>
+                    <div class="weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="days-grid" id="daysGrid"></div>
+                </div>
+            </section>
+
+            <section id="todo" class="section">
+                <h2>To-Do List</h2>
+                
+                <input type="text" id="todoInput" placeholder="Add new task">
+                <select id="priorityLevel">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button id="addTask">Add Task</button>
+        
+                <div>
+                    <button id="toggleTheme">Toggle Dark Mode</button>
+                </div>
+        
+                <ul id="todoList"></ul>
+            </section>
+
+            <section id="timer" class="section">
+                <h2>Timer/Stopwatch</h2>
+                <div class="timer-controls">
+                    <label for="duration">Duration (minutes):</label>
+                    <input type="number" id="duration" value="25">
+                    <button id="startTimer">Start Timer</button>
+                    <button id="stopTimer">Stop Timer</button>
+                    <button id="resetTimer">Reset</button>
+                    <div id="timerDisplay">25:00</div>
+                </div>
+                <div class="stopwatch-controls">
+                    <button id="startStopwatch">Start Stopwatch</button>
+                    <button id="stopStopwatch">Stop Stopwatch</button>
+                    <button id="resetStopwatch">Reset Stopwatch</button>
+                    <div id="stopwatchDisplay">00:00:00</div>
+                </div>
+            </section>
+
+            <section id="notepad" class="section" style="display: none;">
+            <h2>Notepad</h2>
+            <textarea id="notes" placeholder="Write your notes here..."></textarea>
+            <div class="notepad-controls">
+                <button id="saveNote">Save Note</button>
+                <button id="clearNote">Clear Note</button>
+                <p id="statusMessage"></p>
+            </div>
+        </section>
+
+        </main>
+    </div>
+</body>
+</html>

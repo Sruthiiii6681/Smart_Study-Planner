@@ -1,0 +1,246 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+
+  body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+  
+  .signup-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    width: auto;
+    padding: 6px 12px;
+    background-color: #1b1c59;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  button:hover {
+    background-color: #315d89;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  a {
+    color: #1b1c59;
+    text-decoration: none;
+  }
+
+/* Planner Styles */
+.planner-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+
+/* To-Do List Styles */
+.todo-list {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#todo {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+input, select, button {
+    margin: 10px;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+button {
+    cursor: pointer;
+    background-color:#1b1c59;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #315d89;
+}
+
+/* To-Do List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+li .task-text {
+    flex-grow: 1;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: grey;
+}
+
+button.delete {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.delete:hover {
+    background-color: #e53935;
+}
+
+/* Progress Bar Styles */
+#progressBar {
+    width: 0;
+    height: 5px;
+    background-color: green;
+}
+
+/* Dark Mode Styling */
+body.dark-mode #todo {
+    background-color: #333;
+    border: 1px solid #444;
+}
+
+body.dark-mode li {
+    background-color: #444;
+    color: white;
+}
+
+body.dark-mode button {
+    background-color: #666;
+}
+
+body.dark-mode button:hover {
+    background-color: #777;
+}
+
+/* Timer/Stopwatch Styles */
+.timer-controls, .stopwatch-controls {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+#timerDisplay, #stopwatchDisplay {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+/* Notepad Styles */
+#notes {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+
+
+#calendar {
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.month-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #eee;
+}
+
+.month-navigation button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    padding: 5px;
+    background-color: #ddd;
+}
+
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 5px;
+}
+
+.days-grid div {
+    text-align: right;
+    padding: 5px;
+    border: 1px solid #eee;
+    min-height: 50px; /* Adjust as needed */
+}
+
+.days-grid div.empty {
+    background-color: #f9f9f9; /* Or a subtle color for empty days */
+    border: none;
+}
+
+.days-grid div.current-day {
+    background-color: lightblue; /* Highlight the current day */
+}
+
+/* Add more specific styles for events, etc. */
